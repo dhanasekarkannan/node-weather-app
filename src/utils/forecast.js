@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             const current = response.body.current;
             console.log(response.body);
-            const forecastMsg = current.weather_descriptions + " throughout the day. Current temperature is " + current.temperature + " degree Celcius outside and it feels like " + current.feelslike + " degree Celcius and humidity is " + current.humidity + ". There is " + current.precip + "% chance of rain.";
+            const forecastMsg = current.weather_descriptions + " throughout the day. Current temperature is " + current.temperature + " degree Celcius and it feels like " + current.feelslike + " degree Celcius outside and humidity is " + current.humidity + ". There is " + current.precip + "% chance of rain.";
             callback(undefined, forecastMsg);
         }
     });
